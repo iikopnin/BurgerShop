@@ -1,1 +1,0 @@
-My LoftSchool course progect.
