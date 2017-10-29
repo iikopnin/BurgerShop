@@ -5,12 +5,12 @@
   &__item {
     flex-basis: 33%;
     position: relative;
-    min-height: rem(265px);
+    min-height: rem(150px);
     text-align: center;
 
     &:before {
       position: absolute;
-      top: rem(-125px);
+      top: rem(-130px);
       left: 50%;
       transform: translateX(-50%);
       display: block;
@@ -36,7 +36,6 @@
     margin-bottom: .8rem;
     font-family: 'Lifehack';
     font-size: rem(24.1px);
-    line-height: 1.7rem;
   }
 
   &__desc {
