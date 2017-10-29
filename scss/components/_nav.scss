@@ -1,0 +1,28 @@
+.nav {
+  &__list {
+    @include flex(row, space-between, center);
+  }
+
+  &__item {
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      @include circle(4px, $white);
+      margin: 0 10px;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__button {
+    white-space: nowrap;
+    font-family: $fonts;
+    font-size: rem(13px);
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+  }
+}

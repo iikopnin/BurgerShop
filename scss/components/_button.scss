@@ -1,0 +1,30 @@
+.button {
+  min-width: 98px;
+  padding: 12px 16px;
+  background-color: $orange;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: $fonts;
+  font-size: rem(13px);
+  font-weight: 700;
+  line-height: 1.42; 
+  color: $white;
+  text-transform: uppercase;
+  transition: .5s;
+
+  &:hover, &:active, &:focus  {
+    background-color: darken($orange, 5%);
+  }
+
+  &--color {
+
+    &_dark {
+      background-color: $dark;
+
+      &:hover, &:active, &:focus  {
+        background-color: darken($dark, 5%);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: rem(10px);
+
+  &__container {
+    @include flex($justify: space-between, $align: center);
+    min-height: rem(80px);
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__nav {
+    margin-right: rem(8px);
+  }
+}

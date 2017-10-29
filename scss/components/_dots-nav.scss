@@ -1,0 +1,19 @@
+.dots-nav {
+  // @include flex(column, flex-start, center);
+  position: fixed;
+  right: 2%;
+  top: 14%;
+  
+  &__btn {
+    height: 16px;
+    width: 16px;
+    background-image: url('/img/svg/white-dot.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    &:hover, &:active, &:focus {
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+  }
+}

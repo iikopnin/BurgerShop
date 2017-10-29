@@ -1,0 +1,47 @@
+.about {
+  @include flex($justify: space-between, $align:baseline);
+  width: 100%;
+
+  &__item {
+    flex-basis: 33%;
+    position: relative;
+    min-height: rem(265px);
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      top: rem(-125px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+    }
+
+    &--img {
+       
+      &_fresh-products:before {
+        content: url('/img/svg/meat.svg');
+      }
+
+      &_hand-made:before {
+        content: url('/img/svg/hand.svg');
+      }
+
+      &_natural:before {
+        content: url('/img/svg/natural.svg');
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: .8rem;
+    font-family: 'Lifehack';
+    font-size: rem(24.1px);
+    line-height: 1.7rem;
+  }
+
+  &__desc {
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: 1.6rem;
+  }
+}
