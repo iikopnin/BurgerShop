@@ -1,36 +1,36 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
+  src: url("../../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../../fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("../../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
+  src: url("../../fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("../../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("/fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
+  src: url("../../fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'lifehackmedium';
-  src: url("/fonts/lifehack_medium-webfont.woff2") format("woff2"), url("/fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'gagalinregular';
-  src: url("/fonts/gagalin-regular-webfont.woff2") format("woff2"), url("/fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -117,7 +117,7 @@ figure {
 }
 
 .best {
-  background-image: url("/img/backgrounds/table-bg.jpg");
+  background-image: url("../img/backgrounds/table-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -146,7 +146,7 @@ figure {
 }
 
 .head {
-  background-image: url("/img/backgrounds/texture.png"), url("/img/backgrounds/salad-bg.jpg");
+  background-image: url("../img/backgrounds/texture.png"), url("../img/backgrounds/salad-bg.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
   background-position: center;
@@ -188,7 +188,7 @@ figure {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   height: 420px;
-  background-image: url("/img/burgers/burger-with-steam.png"), url("/img/svg/drops.svg");
+  background-image: url("../img/burgers/burger-with-steam.png"), url("../img/svg/drops.svg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position-x: 42px, 5px;
@@ -325,7 +325,7 @@ figure {
 .arrow-button {
   height: 1.875rem;
   width: 3.4375rem;
-  background-image: url("/img/svg/arrow-scroll.svg");
+  background-image: url("../img/svg/arrow-scroll.svg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-animation: jump;
@@ -406,13 +406,13 @@ figure {
   display: block;
 }
 .about__item--img_fresh-products:before {
-  content: url("/img/svg/meat.svg");
+  content: url("../img/svg/meat.svg");
 }
 .about__item--img_hand-made:before {
-  content: url("/img/svg/hand.svg");
+  content: url("../img/svg/hand.svg");
 }
 .about__item--img_natural:before {
-  content: url("/img/svg/natural.svg");
+  content: url("../img/svg/natural.svg");
 }
 .about__title {
   margin-bottom: .8rem;
@@ -522,7 +522,7 @@ figure {
 .dots-nav__btn {
   height: 16px;
   width: 16px;
-  background-image: url("/img/svg/white-dot.svg");
+  background-image: url("../img/svg/white-dot.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
