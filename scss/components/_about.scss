@@ -19,15 +19,15 @@
     &--img {
        
       &_fresh-products:before {
-        content: url('../img/svg/meat.svg');
+        content: url('/img/svg/meat.svg');
       }
 
       &_hand-made:before {
-        content: url('../img/svg/hand.svg');
+        content: url('/img/svg/hand.svg');
       }
 
       &_natural:before {
-        content: url('../img/svg/natural.svg');
+        content: url('/img/svg/natural.svg');
       }
     }
   }

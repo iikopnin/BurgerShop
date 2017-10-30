@@ -1,5 +1,5 @@
 .head {
-  background-image: url('../img/backgrounds/texture.png'), url('../img/backgrounds/salad-bg.jpg');
+  background-image: url('/img/backgrounds/texture.png'), url('/img/backgrounds/salad-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
   &__img {
     flex-basis: 50%;
     height: 420px;
-    background-image: url('../img/burgers/burger-with-steam.png'), url('../img/svg/drops.svg');
+    background-image: url('/img/burgers/burger-with-steam.png'), url('/img/svg/drops.svg');
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: 42px, 5px;
