@@ -1,9 +1,9 @@
 .logo {
+  display: inline-block;
   height: rem(70px);
   width: rem(92px);
 
   &__img {
-    max-height: 100%;
     max-width: 100%;
   }
 }

@@ -1,12 +1,16 @@
 .section {
-  background-color: rgba(0, 0, 0, .45);
-  min-width: 940px;
+  position: relative;
+  @include flex($justify: center);
   min-height: 100vh;
-
+  
   &__title {
     font-family: 'Gagalin';
     font-size: rem(72px);
     text-transform: uppercase;
+
+    @include phones {
+      font-size: rem(63px);
+    }
 
     &--color {
 

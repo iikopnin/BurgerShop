@@ -2,7 +2,7 @@
   @return $px / 16px + 0rem;
 }
 
-@mixin flex($direction:row, $justify:stretch, $align: flex-start) {
+@mixin flex($direction:row, $justify:flex-start, $align: stretch) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -14,4 +14,16 @@
   height: $width;
   border-radius: 50%;
   background-color: $color;
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
 }

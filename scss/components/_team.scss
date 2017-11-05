@@ -1,0 +1,105 @@
+.team {
+  &__item {
+    margin-bottom: rem(35px);
+    outline: none;
+
+    @include tablets {
+      @include flex(column, center, center);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__name {
+    position: relative;
+    margin-left: 16px;
+    font-family: 'Gagalin';
+    font-size: rem(14px);
+    text-transform: uppercase;
+    color: $white;
+    transition: color 0.4s;
+    @include tablets {
+      font-size: rem(25px);
+    }
+    &:before {
+      position: absolute;
+      top: 7px;
+      left: -16px;
+      content: '';
+      height: 0;
+      width: 0;
+      border-width: 6px 5px;
+      border-style: solid;
+      border-color: transparent;
+      border-top-color: $yellow;
+      transform-origin: 5px 3px;
+      transition: all 0.4s;
+      @include tablets {
+        top: 14px;
+      }
+    }
+  }
+  &__content {
+    @include flex($align: center);
+    margin-top: rem(18px);
+    padding-left: rem(18px);
+    height: 0;
+    overflow: hidden;
+
+    @include tablets {
+      @include flex(column, center, center);
+      padding-left: 0;
+    }
+  }
+  &__avatar {
+    flex: 0 0 auto;
+    margin-right: rem(26px);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include tablets {
+      margin-right: 0;
+      margin-bottom: rem(20px);
+    }
+  }
+  &__avatar-img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
+  &__desc {
+    color: $white;
+    
+    @include tablets {
+      text-align: center;
+    }
+  }
+  &__position {
+    font-size: rem(14px);
+    font-weight: 900;
+  }
+  &__text {
+    margin-top: rem(10px);
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: 1.75rem;
+  }
+}
+
+.active:hover,
+.active:focus,
+.active:active {
+  & .team__name {
+    color: $yellow;
+    &:before {
+      transform: rotate(-180deg);
+    }
+  }
+  & .team__content {
+    height: auto;
+    overflow: none;
+  }
+}

@@ -1,0 +1,23 @@
+.menu-section {
+  background-image: url("../img/backgrounds/burgers-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    @include flex($justify: flex-end);
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+
+  &__menu {
+    z-index: 1;
+  }
+}

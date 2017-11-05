@@ -1,0 +1,86 @@
+.menu {
+  @include flex($justify:flex-end);
+
+  &__item {
+    @include flex($justify:flex-end);
+    color: $white;
+    outline: none;
+  }
+
+  &__category {
+    position: relative;
+    flex: 0 0 auto;
+    width: rem(80px);
+    background-color: #4c4e50;
+    background-size: cover;
+    background-blend-mode: overlay;
+
+    &--type {
+      &_meateater {
+        background-image: url("../img/menu/menu-meateater.jpg");
+        background-position-x: -42%;
+      }
+
+      &_vegan {
+        background-image: url("../img/menu/menu-vegan.jpg");
+        background-position-x: -20%;
+      }
+
+      &_diet {
+        background-image: url("../img/menu/menu-diet.jpg");
+        background-position-x: right;
+      }
+    }
+  }
+
+  &__category-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-90deg)  translateX(-50%) translateY(-50%);
+    transform-origin: 0 0;
+    flex: 1 1 0%;
+    font-family: "Gagalin";
+    white-space: nowrap;
+    font-size: rem(40px);
+
+    @include tablets {
+      top: auto;
+      bottom: 30px;
+      transform: rotate(-90deg)  translateX(0) translateY(-50%);
+    }
+  }
+
+  &__desc {
+    max-height: 100vh;
+    background-color: rgba(47, 50, 52, 0.93);
+    max-width: 540px;
+    width: 0;
+    padding: 11.1111111111% 0;
+    overflow: hidden;
+
+    @include tablets {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin: 0 rem(30px);
+    font-size: rem(14px);
+    font-weight: 300;
+  }
+
+
+}
+
+.active:hover, .active:focus, .active:active {
+
+  .menu__desc {
+    width: inherit;
+  }
+}
+
+.toggle {
+  width: 0;
+  overflow: hidden;
+}

@@ -1,20 +1,18 @@
-.best {
+.about-section {
   background-image: url('../img/backgrounds/table-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  @include phones {
+    background-image: url('../img/backgrounds/table-bg-mobile.jpg');
+  }
 
   &__container {
     @include flex(column, center, center);
   }
 
-  &__title {
-    margin-top: rem(40px);
-    margin-bottom: auto;
-  }
-
-  &__content{
-    margin-bottom: auto;
+  &__content {
+    margin: rem(70px) 0;
   }
 }

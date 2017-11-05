@@ -1,13 +1,28 @@
 .arrow-button {
-  height: rem(30px);
-  width: rem(55px);
-  background-image: url('../img/svg/arrow-scroll.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  display: inline-block;
+  height: 30px;
+  width: 55px;
+  text-align: center;
+  padding-top: 6px;
   animation: jump;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+
+  &:hover, &:focus {
+
+    .arrow-button__icon {
+      fill: $orange;
+    }
+  }
+
+  &__icon {
+    height: 15px;
+    width: 35px;
+    fill: $white;
+  }
 } 
+
+
 
 @keyframes jump {
   0% {

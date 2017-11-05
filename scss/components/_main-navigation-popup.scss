@@ -1,0 +1,14 @@
+.main-navigation-popup {
+  &__button {
+    display: none;
+    height: 25px;
+    width: 30px;
+    background-image: url("../img/svg/menu-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include tablets {
+      display: inline-block;
+    }
+  }
+}

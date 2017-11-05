@@ -9,19 +9,28 @@
   }
 
   &__item {
-    flex-basis: 25%;
     position: relative;
-    height: 50vh;
+    background-color: black;
+    @include flex();
+    width: 25%;
+    min-height: 50vh;
+    outline: none;
 
-    &:hover, &:focus {
+    @include tablets {
+      width: 50%;
+      min-height: 25vh;
+    }
+
+    &:hover, &:focus, &:active{
       
       .reviews__content {
-        opacity: 1;
+        visibility: visible;
       }
     }
   }
 
   &__photo {
+    position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -31,28 +40,44 @@
 
 
   &__content {
-    @include flex($direction: column, $justify: center);
-    position: absolute;
-    top: 0;
-    left: 0;  
-    height: 100%;
+    z-index: 1;
+    @include flex(column, center, flex-start);
     width: 100%;
-    padding: 0 rem(20px);
+    padding: rem(45px) 7.6363636364%;
     background-color: rgba(68, 69, 70, 0.55);
     color: $white;
-    opacity: 0;
-    transition: opacity .7s ease-out;
+    visibility: hidden;
+
+    @include tablets {
+      align-items: center;
+    }
+
+    @include phones {
+      padding-top: rem(30px);
+      padding-bottom: rem(30px);
+    }
 
     span {
       padding-bottom: rem(22px);
       font-family: 'Gagalin';
       font-size: rem(14px);
+
+
+      @include phones {
+        text-align: center;
+        font-size: rem(24px);
+      }
     }
 
     p {
       padding-bottom: rem(16px); 
       font-size: rem(14px);
       line-height: 1.5rem;
+
+
+      @include phones {
+        display: none;
+      }
     }
   }
 

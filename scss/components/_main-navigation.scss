@@ -1,4 +1,8 @@
-.nav {
+.main-navigation {
+  @include tablets {
+    display: none;
+  }
+
   &__list {
     @include flex(row, space-between, center);
   }
@@ -7,7 +11,7 @@
     &:after {
       display: inline-block;
       vertical-align: middle;
-      content: '';
+      content: "";
       @include circle(4px, $white);
       margin: 0 10px;
     }
@@ -17,7 +21,7 @@
     }
   }
 
-  &__button {
+  &__link {
     white-space: nowrap;
     font-family: $fonts;
     font-size: rem(13px);

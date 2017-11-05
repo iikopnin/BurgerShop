@@ -1,0 +1,32 @@
+.head-section {
+  background-image: url('../img/backgrounds/texture.png'), url('../img/backgrounds/salad-bg.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll, fixed;
+
+
+  &__container {
+    @include flex(column, center, center);
+    
+  }
+
+  &__content {
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    width: 100%;
+
+    @include tablets {
+      width: 65.5555555556%;
+    }
+  
+    @include phones {
+      width: 100%;
+    }
+  }
+
+  &__arrow-button {
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+  }
+}

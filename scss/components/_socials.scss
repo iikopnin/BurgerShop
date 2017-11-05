@@ -1,0 +1,28 @@
+.socials {
+  @include flex($align: center);
+
+  &__item {
+    margin-left: 20px;
+  }
+
+
+
+  &__link {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+
+    &:hover, &:focus {
+
+      .socials__icon {
+        fill: $white;
+      }
+    }
+  }
+
+  &__icon {
+    max-height: 100%;
+    max-width: 100%;
+    fill: #5a5a5a;
+  }
+}

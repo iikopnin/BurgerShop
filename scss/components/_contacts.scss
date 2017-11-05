@@ -1,0 +1,26 @@
+.contacts {
+  font-family: &fonts;
+  font-size: rem(14px);
+  font-style: normal;
+
+  @include phones {
+    text-align: center;
+  }
+
+  &__addres {
+    display: inline-block;
+    margin-bottom: rem(8px);
+    color: $white;
+  }
+
+  &__phone-number {
+    font-weight: 900;
+    color: $orange;
+
+    &:before {
+      content: url("../img/svg/phone.svg");
+      margin-right: 8px;
+      display: inline-block;
+    }
+  }
+}

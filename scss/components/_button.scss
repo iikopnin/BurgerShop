@@ -1,8 +1,9 @@
 .button {
-  min-width: 98px;
-  padding: 12px 16px;
+  // min-width: 98px;
+  padding: 0.75em 1em;
+  padding-bottom: 0.8em;
   background-color: $orange;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   white-space: nowrap;
   text-align: center;
   font-family: $fonts;
@@ -11,11 +12,15 @@
   line-height: 1.42; 
   color: $white;
   text-transform: uppercase;
-  transition: .5s;
+  transition: background .5s;
 
   &:hover, &:active, &:focus  {
-    background-color: darken($orange, 5%);
+    background-color: darken($orange, 15%);
   }
+
+  // &:focus {
+  //   visibility: initial;
+  // }
 
   &--color {
 
@@ -23,7 +28,20 @@
       background-color: $dark;
 
       &:hover, &:active, &:focus  {
-        background-color: darken($dark, 5%);
+        background-color: darken($dark, 15%);
+      }
+    }
+
+    &_transparent {
+      padding: 0.6875em 1em;
+      border: 1px solid transparent;
+      background: none;
+      text-transform: none;
+
+      &:hover, &:active, &:focus {
+        
+        background: none;
+        border-color: $white;
       }
     }
   }

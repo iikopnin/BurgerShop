@@ -1,19 +1,39 @@
 .dots-nav {
-  // @include flex(column, flex-start, center);
+  z-index: 1;
   position: fixed;
   right: 2%;
   top: 14%;
+
+  @include tablets {
+    display: none;
+  }
   
-  &__btn {
+  &__link {
+    position: relative;
+    display: inline-block;
     height: 16px;
     width: 16px;
-    background-image: url('../img/svg/white-dot.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: $white;
+    }
+    
     
     &:hover, &:active, &:focus {
       border: 1px solid $white;
       border-radius: 50%;
     }
   }
+}
+
+nav a {
+  cursor: pointer;
 }
