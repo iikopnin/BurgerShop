@@ -1,27 +1,14 @@
 .header {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 50%;
   z-index: 1;
-  transform: translateX(-50%);
   width: 100%;
+  transform: translateX(-50%);
 
   &__container {
-    @include flex($justify: space-between, $align: center);
-    min-height: rem(80px);
-    padding-top: rem(10px);
-  }
-
-  &__logo {
-    margin-right: auto;
-  }
-
-  &__main-navigation {
-    margin-right: 20px;
-  }
-
-  &__main-navigation-popup {
-    margin-left: 20px;
+    padding-top: 10px;
+    min-height: 80px;
   }
 }
 

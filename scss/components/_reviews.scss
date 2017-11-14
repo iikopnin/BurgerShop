@@ -4,10 +4,6 @@
   @include flex;
   flex-wrap: wrap;
 
-  &__container {
-    @include flex();
-  }
-
   &__item {
     position: relative;
     background-color: black;
@@ -43,43 +39,36 @@
     z-index: 1;
     @include flex(column, center, flex-start);
     width: 100%;
-    padding: rem(45px) 7.6363636364%;
+    padding: 5% 7.6363636364%;
     background-color: rgba(68, 69, 70, 0.55);
     color: $white;
     visibility: hidden;
 
     @include tablets {
       align-items: center;
+      text-align: center;
     }
 
-    @include phones {
-      padding-top: rem(30px);
-      padding-bottom: rem(30px);
-    }
-
-    span {
-      padding-bottom: rem(22px);
+    p:first-child {
+      margin-bottom: 20px;
       font-family: 'Gagalin';
       font-size: rem(14px);
 
-
       @include phones {
-        text-align: center;
         font-size: rem(24px);
       }
     }
 
-    p {
-      padding-bottom: rem(16px); 
+    p:nth-child(2) {
+      margin-bottom: 10px; 
       font-size: rem(14px);
-      line-height: 1.5rem;
-
+      line-height: rem(24px);
 
       @include phones {
-        display: none;
+        margin-bottom: 0;
+        height: 0;
+        overflow: hidden;
       }
     }
   }
-
-  
 }

@@ -1,43 +1,45 @@
 .team-section {
   @include flex($justify: flex-end);
-
-  @include tablets {
-    justify-content: space-between;
-  }
+  background-color: #575757;
+  background-image: url("../img/backgrounds/team-photo.jpg");
+  background-size: cover;
 
   &__container {
     margin: 0;
     width: 50%;
+    padding-left: 8%;
     background-color: rgba(47, 50, 52, 0.93);
 
     @include tablets {
       max-width: 100%;
       width: 100%;
+      padding-left: 0;
     }
-  }
-
-  &__background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
   }
 
   &__content {
     @include flex(column, center, flex-start);
     height: 100%;
     max-width: 380px;
-    margin-left: 17.0212765957%;
-
-    @include tablets {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+    @include tablets{
       align-items: center;
-      margin-left: 0;
       max-width: 100%;
     }
   }
 
   &__team {
-    margin: rem(80px) 0;
+    margin: auto;
+
+    @include tablets {
+      width: 48%;
+    }
+
+    @include small-phones {
+      width: 100%;
+    }
   }
 }
 

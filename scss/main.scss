@@ -6,8 +6,9 @@
 @import "main-components/main-content";
 @import "main-components/section";
 @import "main-components/container";
-@import "sections/about-section";
 @import "sections/head-section";
+@import "sections/about-section";
+@import "sections/burgers-section";
 @import "sections/team-section";
 @import "sections/menu-section";
 @import "sections/reviews-section";
@@ -17,10 +18,12 @@
 @import "components/logo";
 @import "components/main-navigation";
 @import "components/button";
-@import "components/main-navigation-popup";
-@import "components/slogan";
+@import "components/navigation-popup";
 @import "components/arrow-button";
 @import "components/features";
+@import "components/burger";
+@import "components/composition";
+@import "components/caloricity";
 @import "components/team";
 @import "components/menu";
 @import "components/reviews";

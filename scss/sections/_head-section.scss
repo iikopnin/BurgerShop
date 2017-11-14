@@ -1,34 +1,105 @@
 .head-section {
-  background-image: url('../img/backgrounds/texture.png'), url('../img/backgrounds/salad-bg.jpg');
+  background-color: #181818;
+  background-image: url("../img/backgrounds/texture.png"), url("../img/backgrounds/salad-bg.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
   background-position: center;
-  // background-attachment: scroll, fixed;
-
-
-
+  background-attachment: scroll, fixed;
 
   &__container {
     @include flex(column, center, center);
-    
   }
 
   &__content {
-    margin-top: auto;
-    margin-bottom: 2.5rem;
+    @include flex($justify: space-between, $align:center);
+    margin: auto;
     width: 100%;
 
     @include tablets {
-      width: 65.5555555556%;
+      @include flex(column, center, center);
     }
-  
+  }
+
+  &__left-col {
+    width: 48.9361702128%;
+    background-image: url("../img/svg/drops.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 35%;
+
+    @include tablets {
+      width: 64%;
+    }
+
     @include phones {
-      width: 100%;
+      width: 79.5%;
+    }
+  }
+
+  &__right-col {
+    width: 50%;
+    padding-top: rem(64px);
+
+    @include tablets {
+      width: 66%;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    @include phones {
+      padding-top: 30px;
+      width: 84%;
+    }
+
+    @include small-phones {
+      padding-top: 10px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    left: 54%;
+    max-width: 100%;
+    transform: translateX(-50%);
+
+    @include tablets {
+      left: 52%;
+    }
+
+    @include phones {
+      max-width: 92%;
+    }
+  }
+
+  &__text {
+
+    &--small {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: "Lifehack";
+    font-size: rem(65px);
+    line-height: 3.8rem;
+    text-transform: none;
+    color: $white;
+
+      @include phones {
+        margin-top: -15px;
+        font-size: rem(54px);
+      }
+
+      @include small-phones {
+        margin-top: 0;
+        font-size: rem(40px);
+        line-height: 2.4rem;
+      }
     }
   }
 
   &__arrow-button {
-    margin-top: auto;
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
+
+    @include phones {
+      margin-bottom: 30px;
+    }
   }
 }

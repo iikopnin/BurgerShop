@@ -10,11 +10,11 @@
 
   &__container {
     @include flex($justify: space-between, $align: center);
+    padding: 12px 0;
     min-height: rem(80px);
 
     @include phones {
       @include flex(column, space-between, center);
-      padding: 12px 0;
       min-height: rem(115px);
     }
   }

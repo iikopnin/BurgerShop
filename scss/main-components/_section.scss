@@ -9,7 +9,11 @@
     text-transform: uppercase;
 
     @include phones {
-      font-size: rem(63px);
+      font-size: rem(50px);
+    }
+
+    @include small-phones {
+      font-size: rem(45px);
     }
 
     &--color {

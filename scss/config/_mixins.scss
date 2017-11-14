@@ -9,13 +9,6 @@
   align-items: $align;
 }
 
-@mixin circle($width, $color) {
-  width: $width;
-  height: $width;
-  border-radius: 50%;
-  background-color: $color;
-}
-
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;
@@ -24,6 +17,18 @@
 
 @mixin phones {
   @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin small-phones {
+  @media screen and (max-width: $small-phones) {
+    @content;
+  }
+}
+
+@mixin small-height {
+  @media screen and (max-height: $small-height) {
     @content;
   }
 }

@@ -2,63 +2,106 @@
   @include flex($justify: space-between, $align:baseline);
 
   @include phones {
-    @include flex(column, center, center);
+    @include flex(column, center, flex-end);
   }
 
   &__item {
-    min-height: rem(150px);
+    position: relative;
     width: 33%;
     text-align: center;
 
     @include phones {
-      @include flex($justify: space-between, $align:center);
-      width: 100%;
+      width: 70%;
+      padding-bottom: 40px;
       text-align: left;
-    }
-  }
 
-  &__pic {
-    display: inline-block;
-    margin-bottom: rem(30px);
-    height: 90px;
-    width: 100px;
-
-    @include phones {
-      flex: 0 0 auto;
-      margin: 4%;
-      height: 72px;
-      width: 80px;
-    }
-  }
-
-  &__img {
-    max-height: 100%;
-    max-width: 100%;
-
-    &--color {
-
-      &_green {
-        fill: $green;
-      }
-      &_orange {
-        fill: $orange;
+      &:last-child {
+        padding-bottom: 0;
       }
 
-      &_yellow {
-        fill: $yellow;
+      @include small-phones {
+        padding-bottom: 10px;
+        width: 80%;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      display: inline-block;
+      height: 90px;
+      width: 100px;
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+
+      @include phones {
+        top: 0;
+        transform: none;
+      }
+
+      @include small-phones {
+        background-size: contain;
+        height: 54px;
+        width: 60px;
+      }
+    }
+
+    &--img {
+      &_meat:before {
+        background-image: url("../img/svg/meat.svg");
+
+        @include phones {
+          left: -38%;
+        }
+
+        @include small-phones {
+          left: -26%;
+        }
+      }
+
+      &_hand:before {
+        width: 75px;
+        background-image: url("../img/svg/hand.svg");
+
+        @include phones {
+          left: -31%;
+        }
+
+        @include small-phones {
+          left: -22%;
+        }
+      }
+
+      &_natural:before {
+        background-image: url("../img/svg/natural.svg");
+
+        @include phones {
+          left: -34%;
+        }
+
+        @include small-phones {
+          left: -26%;
+        }
       }
     }
   }
 
   &__title {
-    margin-bottom: 0.8rem;
+    margin-bottom: 13px;
     font-family: 'Lifehack';
     font-size: rem(24px);
+
+    @include small-phones {
+      margin-bottom: 10px;
+      line-height: 1.6rem;
+    }
   }
 
   &__desc {
     font-size: rem(14px);
     font-weight: 300;
-    line-height: 1.6rem;
+    line-height: rem(24px);
   }
 }

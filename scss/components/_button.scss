@@ -1,26 +1,22 @@
 .button {
-  // min-width: 98px;
-  padding: 0.75em 1em;
-  padding-bottom: 0.8em;
+  display: inline-block;
+  padding: 10px 17px;
+  padding-bottom: 11px;
+  border-radius: 5px;
   background-color: $orange;
-  border-radius: 0.3125em;
-  white-space: nowrap;
-  text-align: center;
   font-family: $fonts;
   font-size: rem(13px);
   font-weight: 700;
   line-height: 1.42; 
-  color: $white;
   text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
   transition: background .5s;
 
   &:hover, &:active, &:focus  {
     background-color: darken($orange, 15%);
   }
-
-  // &:focus {
-  //   visibility: initial;
-  // }
 
   &--color {
 
@@ -33,7 +29,7 @@
     }
 
     &_transparent {
-      padding: 0.6875em 1em;
+      padding: 9px 16px;
       border: 1px solid transparent;
       background: none;
       text-transform: none;

@@ -1,19 +1,40 @@
 .main-navigation {
-  @include tablets {
-    display: none;
+  @include flex(row, space-between, center);
+
+  &__logo {
+    flex-shrink: 0;
+    margin-right: auto;
   }
 
+  &__button {
+    margin-left: 15px;
+  }
+
+  &__navigation-popup__button {
+    margin-left: 25px;
+  }
+  
   &__list {
-    @include flex(row, space-between, center);
+    @include flex($align:center);
+    flex-wrap: wrap;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__item {
+
     &:after {
+      content: "";
       display: inline-block;
       vertical-align: middle;
-      content: "";
-      @include circle(4px, $white);
-      margin: 0 10px;
+      margin-left: 9px;
+      margin-right: 10px;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: $white;
     }
 
     &:last-child:after {
@@ -22,11 +43,14 @@
   }
 
   &__link {
-    white-space: nowrap;
     font-family: $fonts;
     font-size: rem(13px);
     font-weight: 700;
-    color: $white;
     text-transform: uppercase;
+    color: $white;
+
+    &:hover, &:active, &:focus {
+      color: $orange;
+    }
   }
 }

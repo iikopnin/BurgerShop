@@ -13,6 +13,11 @@
 
     @include tablets {
       width: 100%;
+      margin-top: 16px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 
@@ -21,12 +26,35 @@
     margin-top: 16px;
     
     &:first-child {
-      margin-bottom: 0;
+      margin-top: 0;
     }
 
     &--buttons {
       display: block;
-      margin-top: 14px;
+      margin-top: 15px;
+      
+      &:first-child {
+        margin-top: 15px;
+      }
+
+      @include phones {
+        @include flex(row, center);
+        margin-top: 33px;
+
+        &:first-child {
+          margin-top: 33px;
+        }
+      }
+
+      @include small-phones {
+        &:first-child {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    @include small-phones {
+      margin-top: 5px;
     }
   }
 
@@ -39,11 +67,9 @@
     }
 
     &--radio {
-      position: relative;
-    }
-
-    &--checkbox {
-      position: relative;
+      @include phones {
+        flex: 0 0 auto;
+      }
     }
   }
 
@@ -54,10 +80,10 @@
   }
 
   &__input {
-    margin-top: rem(4px);
+    margin-top: 4px;
     height: 2rem;
     width: 100%;
-    border: 1px solid #d1cfcb;
+    border: 2px solid #d1cfcb;
     border-radius: 4px;
   }
 
@@ -68,39 +94,27 @@
 
   &__radio {
     position: absolute;
-    left: -9999px;
+    opacity: 0;
 
-    &:checked + .order-form__radio-fake:before {
+    &:checked + .order-form__radio-fake {
       background-color: $orange;
     }
   }
 
   &__radio-fake {
-    position: relative;
     display: inline-block;
     margin-right: 10px;
     height: 16px;
     width: 16px;
+    border: 5px solid $white;
     border-radius: 50%;
     background-color: $white;
     cursor: pointer;
-
-    &:before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      content: "";
-      height: 6px;
-      width: 6px;
-      border-radius: 50%;
-      background-color: transparent;
-    }
   }
 
   &__checkbox {
     position: absolute;
-    left: -9999px;
+    opacity: 0;
 
     &:checked + .order-form__checkbox-fake {
       background-image: url("../img/svg/orange-mark.svg");
@@ -114,12 +128,12 @@
     width: 16px;
     background-color: $white;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: 14px 14px;
+    background-position: center;
     cursor: pointer;
   }
 
   &__submit {
-    margin-right: rem(5px);
+    margin-right: 5px;
   }
 }

@@ -18,48 +18,47 @@
   <div class="wrapper">
     <header class="header">
       <div class="container header__container">
-        <a class="logo header__logo">
-          <img class="logo__img" src="img/svg/logo.svg">
-        </a>
-        <nav class="main-navigation header__main-navigation">
+        <nav class="main-navigation">
+          <a class="logo main-navigation__logo">
+            <img class="logo__img" src="img/svg/logo.svg" alt="Логотип магазина Мистер Бургер">
+          </a>
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="">О нас</a>
+              <a class="main-navigation__link" href="#head">О нас</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="">Бургеры</a>
+              <a class="main-navigation__link" href="#about">Бургеры</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="">Команда</a>
+              <a class="main-navigation__link" href="#burgers">Команда</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="">Меню</a>
+              <a class="main-navigation__link" href="#team">Меню</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="">Отзывы</a>
+              <a class="main-navigation__link" href="#menu">Отзывы</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="">Контакты</a>
+              <a class="main-navigation__link" href="#reviews">Контакты</a>
             </li>
           </ul>
+          <a class="button main-navigation__button">Заказать</a>
+          <button class="navigation-popup__button main-navigation__navigation-popup__button"></button>
         </nav>
-        <button class="button header__button">Заказать</button>
-        <button class="main-navigation-popup__button header__main-navigation-popup">
-        </button>
       </div>
     </header>
     <main class="main-content">
-      <section class="section head-section">
+      <section class="section head-section" id="head">
         <div class="container head-section__container">
-          <section class="slogan head-section__content">
-            <div class="slogan__left-col">
-              <img src="img/burgers/burger-with-steam.png" alt="Изображение бургера с дымком" class="slogan__img">
+          <div class="head-section__content">
+            <p class="head-section__left-col">
+              <img src="img/burgers/burger-with-steam.png" alt="Изображение бургера с дымком" class="head-section__img">
+            </p>
+            <div class="head-section__right-col">
+              <h2 class="head-section__text section__title section__title--color_yellow">Мы делаем
+              <span class="head-section__text head-section__text--small">натуральные бургеры</span></h2>
             </div>
-            <div class="slogan__right-col">
-              <h2 class="slogan__text section__title section__title--color_yellow">Мы делаем</h2>
-              <h2 class="slogan__text slogan__text--small">натуральные бургеры</h2>
-            </div>
-          </section>
+          </div>
           <a class="arrow-button head-section__arrow-button" href="#" title="прокрутка вниз">
             <svg class="arrow-button__icon">
               <use xlink:href="img/svg/script.svg#arrow-scroll"></use>
@@ -67,16 +66,11 @@
           </a>
         </div>
       </section>
-      <section class="section about-section">
+      <section class="section about-section" id="about">
         <div class="container about-section__container">
-          <h2 class="section__title section__title--color_dark">Мы лучшие</h2>
+          <h2 class="section__title section__title--color_dark about-section__title">Мы лучшие</h2>
           <ul class="features about-section__content">
-            <li class="features__item">
-              <span class="features__pic">
-                <svg class="features__img features__img--color_orange">
-                  <use xlink:href="img/svg/script.svg#meat"></use>
-                </svg>
-              </span>
+            <li class="features__item features__item--img_meat">
               <div class="feature__text">
                 <h3 class="features__title">100% свежее мясо</h3>
                 <p class="features__desc">
@@ -84,12 +78,7 @@
                 </p>
               </div>
             </li>
-            <li class="features__item">
-              <div class="features__pic">
-                <svg class="features__img features__img--color_yellow">
-                  <use xlink:href="img/svg/script.svg#hand"></use>
-                </svg>
-              </div>
+            <li class="features__item features__item--img_hand">
               <div class="feature__text">
                 <h3 class="features__title">Ручная сборка</h3>
                 <p class="features__desc">
@@ -98,12 +87,7 @@
                 </p>
               </div>
             </li>
-            <li class="features__item">
-              <div class="features__pic">
-                <svg class="features__img features__img--color_green">
-                  <use xlink:href="img/svg/script.svg#natural"></use>
-                </svg>
-              </div>
+            <li class="features__item features__item--img_natural">
               <div class="feature__text">
                 <h3 class="features__title">Натуральные ингридиенты</h3>
                 <p class="features__desc">
@@ -114,66 +98,123 @@
           </ul>
         </div>
       </section>
-      <section class="section team-section">
-        <img src="img/backgrounds/team-photo.jpg" alt="Фотография персонала" class="team-section__background">
+      <section class="section burgers-section" id="burgers">
+        <div class="container burgers-section__container">
+          <div class="burger">
+            <p class="burger__photo">
+              <img class="burger__img" src="img/burgers/dark-beef-burger.png" alt="Бургер с черной булочкой">
+            </p>
+            <div class="burger__desc">
+              <h3 class="section__title section__title--color_white burger__title">Dark beef<br>
+                burger</h3>
+              <p class="burger__text">
+                Ваш старый добрый знакомый,
+                с рубленым бифштексом из 100% говядины, 
+                тремя кусочками нежнейшего сыра эмменталь,
+                двумя помидорами, луком, салатом и соусом гриль
+                теперь с добавлением экзотического соуса чураско.
+              </p>
+              <p class="burger__payment">
+                <span class="burger__price">500</span>
+                <span class="burger__currency">рублей</span>
+                <a href="#" class="button burger__button">Заказать</a>
+              </p>
+              <div class="composition burger__composition">
+                <button class="button composition__button">Состав</button>
+                <table class="composition__table">
+                  <tr class="composition__table-row composition__table-row--type_beef">
+                    <td class="composition__table-data composition__table-data--ingredient">Говядина</td>
+                    <td class="composition__table-data composition__table-data--weight">300г</td>
+                  </tr>
+                  <tr class="composition__table-row composition__table-row--type_buns">
+                    <td class="composition__table-data composition__table-data--ingredient">Булочки</td>
+                    <td class="composition__table-data composition__table-data--weight">100г</td>
+                  </tr>
+                  <tr class="composition__table-row composition__table-row--type_salad">
+                    <td class="composition__table-data composition__table-data--ingredient">Зелень</td>
+                    <td class="composition__table-data composition__table-data--weight">70г</td>
+                  </tr>
+                  <tr class="composition__table-row composition__table-row--type_sauce">
+                    <td class="composition__table-data composition__table-data--ingredient">Соус</td>
+                    <td class="composition__table-data composition__table-data--weight">150г</td>
+                  </tr>
+                  <tr class="composition__table-row composition__table-row--type_cucumber">
+                    <td class="composition__table-data composition__table-data--ingredient">Овощи</td>
+                    <td class="composition__table-data composition__table-data--weight">200г</td>
+                  </tr>
+                  <tr class="composition__table-row composition__table-row--type_cheese">
+                    <td class="composition__table-data composition__table-data--ingredient">Сыр</td>
+                    <td class="composition__table-data composition__table-data--weight">80г</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="caloricity burger__caloricity">
+                1200<br>
+                <span class="caloricity-kkal">ккал</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section team-section" id="team">
         <div class="container team-section__container">
           <div class="team-section__content">
             <h2 class="section__title section__title--color_yellow">Команда</h2>
             <ul class="team team-section__team">
               <li class="team__item active" tabindex="0">
-                <p class="team__name">Дэниэл Рэдклиф</p>
+                <button class="team__name">Дэниэл Рэдклиф</button>
                 <div class="team__content">
-                  <div class="team__avatar">
-                    <img src="img/team/member-photo.jpg" alt="Фото сотрудника магазина" class="team__avatar-img">
-                  </div>
                   <div class="team__desc">
-                    <span class="team__position">Повар</span>
+                    <h3 class="team__position">Повар</h3>
                     <p class="team__text">
                       Творит на кухне настоящую магию!
                     </p>
                   </div>
-                </div>
-              </li>
-              <li class="team__item active" tabindex="0">
-                <p class="team__name">Ричардс Джеймс</p>
-                <div class="team__content">
                   <div class="team__avatar">
                     <img src="img/team/member-photo.jpg" alt="Фото сотрудника магазина" class="team__avatar-img">
                   </div>
+                </div>
+              </li>
+              <li class="team__item active" tabindex="0">
+                <button class="team__name">Ричардс Джеймс</button>
+                <div class="team__content">
                   <div class="team__desc">
-                    <span class="team__position">Оператор</span>
+                    <h3 class="team__position">Оператор</h3>
                     <p class="team__text">
                       С радостью поможет подобрать бургер и оформить заказ.
                     </p>
                   </div>
-                </div>
-              </li>
-              <li class="team__item active" tabindex="0">
-                <p class="team__name">Джейк Финн</p>
-                <div class="team__content">
                   <div class="team__avatar">
                     <img src="img/team/member-photo.jpg" alt="Фото сотрудника магазина" class="team__avatar-img">
                   </div>
+                </div>
+              </li>
+              <li class="team__item active" tabindex="0">
+                <button class="team__name">Джейк Финн</button>
+                <div class="team__content">
                   <div class="team__desc">
-                    <span class="team__position">Официант</span>
+                    <h3 class="team__position">Официант</h3>
                     <p class="team__text">
                       Время вкусного обеда!
                     </p>
                   </div>
-                </div>
-              </li>
-              <li class="team__item active" tabindex="0">
-                <p class="team__name">Николай Иванов</p>
-                <div class="team__content">
                   <div class="team__avatar">
                     <img src="img/team/member-photo.jpg" alt="Фото сотрудника магазина" class="team__avatar-img">
                   </div>
+                </div>
+              </li>
+              <li class="team__item active" tabindex="0">
+                <button class="team__name">Николай Иванов</button>
+                <div class="team__content">
                   <div class="team__desc">
-                    <span class="team__position">Директор</span>
+                    <h3 class="team__position">Директор</h3>
                     <p class="team__text">
                       Судьба в мире фронтенда у него не сложилась, 
                       но для своего магазина он постарался.
                     </p>
+                  </div>
+                  <div class="team__avatar">
+                    <img src="img/team/member-photo.jpg" alt="Фото сотрудника магазина" class="team__avatar-img">
                   </div>
                 </div>
               </li>
@@ -181,13 +222,13 @@
           </div>
         </div>
       </section>
-      <section class="section menu-section">
+      <section class="section menu-section" id="menu">
         <div class="container menu-section__container">
           <h2 class="section__title section__title--color_white menu-section__title">Меню</h2>
           <ul class="menu menu-section__menu">
             <li class="menu__item active" tabindex="0">
               <div class="menu__category menu__category--type_meateater">
-                <p class="menu__category-text">Для мясоедов</p>
+                <h3 class="menu__category-text">Для мясоедов</h3>
               </div>
               <div class="menu__desc">
                 <p class="menu__text">
@@ -202,7 +243,7 @@
             </li>
             <li class="menu__item active" tabindex="0">
               <div class="menu__category menu__category--type_vegan">
-                <p class="menu__category-text">Вегетарианское</p>
+                <h3 class="menu__category-text">Вегетарианское</h3>
               </div>
               <div class="menu__desc">
                 <p class="menu__text">
@@ -217,7 +258,7 @@
             </li>
             <li class="menu__item active" tabindex="0">
               <div class="menu__category menu__category--type_diet">
-                <p class="menu__category-text">Диетическое</p>
+                <h3 class="menu__category-text">Диетическое</h3>
               </div>
               <div class="menu__desc">
                 <p class="menu__text">
@@ -233,13 +274,13 @@
           </ul>
         </div>
       </section>
-      <section class="section reviews-section">
+      <section class="section reviews-section" id="reviews">
         <div class="container reviews-section__container">
           <ul class="reviews">
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/happy-girl.jpg" alt="Фото Гермионы Грейнджер" class="reviews__photo">
               <div class="reviews__content">
-                <span>Гермиона Грейнджер</span>
+                <p>Гермиона Грейнджер</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -250,7 +291,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/man-with-glasses.jpg" alt="Фото Константина Спилберга" class="reviews__photo">
               <div class="reviews__content">
-                <span>Константин Спилберг</span>
+                <p>Константин Спилберг</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -261,7 +302,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/beautiful-lady.jpg" alt="Фото Елизаветы Шикаловой" class="reviews__photo">
               <div class="reviews__content">
-                <span>Елизавета Шикалова</span>
+                <p>Елизавета Шикалова</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -272,7 +313,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/man-with-cap.jpg" alt="Фото Макса Юнги" class="reviews__photo">
               <div class="reviews__content">
-                <span>Макс Юнга</span>
+                <p>Макс Юнга</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -283,7 +324,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/bad-boy.jpg" alt="Фото Александра Малфоя" class="reviews__photo">
               <div class="reviews__content">
-                <span>Александр Малфой</span>
+                <p>Александр Малфой</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -294,7 +335,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/girl-with-glasses.jpg" alt="Фото Марии Томашенко" class="reviews__photo">
               <div class="reviews__content">
-                <span>Мария Томашенко</span>
+                <p>Мария Томашенко</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -305,7 +346,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/grandpa.jpg" alt="Фото Юрия Алепина" class="reviews__photo">
               <div class="reviews__content">
-                <span>Юрий Алепин</span>
+                <p>Юрий Алепин</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -316,7 +357,7 @@
             <li class="reviews__item" tabindex="0">
               <img src="img/reviews/man-with-beard.jpg" alt="Фото Константина Клюкова" class="reviews__photo">
               <div class="reviews__content">
-                <span>Константин Клюков</span>
+                <p>Константин Клюков</p>
                 <p>
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
                   мягкими, котлетка такой сочной, а сыр таким плавленным.
@@ -327,10 +368,10 @@
           </ul>
         </div>
       </section>
-      <section class="section order-section">
+      <section class="section order-section" id="order">
         <div class="container order-section__container">
-          <h2 class="section__title section__title--color_yellow">Закажите доставку</h2>
-          <form class="order-form order-section__content" action="">
+          <h2 class="section__title section__title--color_yellow order-section__title">Закажите доставку</h2>
+          <form class="order-form order-section__content" action="#">
             <div class="order-form__container">
               <div class="order-form__col">
                 <div class="order-form__row">
@@ -388,8 +429,8 @@
                       <span class="order-form__label">Оплата по карте</span>
                     </label>
                   </div>
-                  <div class="order-form__row--buttons">
-                    <label class="order__elem order__elem--checkbox">
+                  <div class="order-form__row order-form__row--buttons">
+                    <label class="order__elem">
                       <input type="checkbox" class="order-form__checkbox">
                       <span class="order-form__checkbox-fake"></span>
                       <span class="order-form__label">Не перезванивать</span>
@@ -405,7 +446,7 @@
           </form>
         </div>
       </section>
-      <section class="section contacts-section">
+      <section class="section contacts-section" id="contacts">
       </section>
     </main>
     <footer class="footer">
@@ -474,7 +515,28 @@
         </li>
       </ul>
     </nav>
+    <ul class="navigation-popup">
+      <li class="navigation-popup__item">
+        <a href="#about" class="navigation-popup__link">Почему мы</a>
+      </li>
+      <li class="navigation-popup__item">
+        <a href="#burgers" class="navigation-popup__link">Бургеры</a>
+      </li>
+      <li class="navigation-popup__item">
+        <a href="#team" class="navigation-popup__link">Кто мы</a>
+      </li>
+      <li class="navigation-popup__item">
+        <a href="#reviews" class="navigation-popup__link">Свяжитесь с нами</a>
+      </li>
+      <li class="navigation-popup__item">
+        <a href="#order" class="navigation-popup__link">Сделайте заказ</a>
+      </li>
+      <li class="navigation-popup__item">
+        <a href="#contacts" class="navigation-popup__link">Контакты</a>
+      </li>
+    </ul>
   </div>
+  <script src="js/navigation-popup.js"></script>
 </body>
 
 </html>

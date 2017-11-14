@@ -1,15 +1,28 @@
 .order-section {
+  background-color: #2c2c2c;
   background-image: url('../img/backgrounds/moto-bg.png'), url('../img/backgrounds/dark-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
   background-position: center;
 
+  &__title {
+    @include phones {
+      text-align: center;
+    }
+
+    @include small-phones {
+      line-height: 2.6rem;
+    }
+  }
+  
   &__container {
     @include flex(column, center, center);
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   &__content {
-    margin: rem(70px) 0;
+    margin: auto;
 
     @include tablets {
       width: 65.5555555556%;
@@ -17,7 +30,6 @@
 
     @include phones {
       width: 100%;
-      margin: rem(30px) 0;
     }
   }
 }

@@ -1,18 +1,25 @@
 .about-section {
+  background-color: #f9f3ef;
   background-image: url('../img/backgrounds/table-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @include phones {
+  @include tablets {
+    background-image: url('../img/backgrounds/table-bg-tablet.jpg');
+  }
+
+  @include tablets {
     background-image: url('../img/backgrounds/table-bg-mobile.jpg');
   }
 
   &__container {
     @include flex(column, center, center);
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   &__content {
-    margin: rem(70px) 0;
+    margin: auto;
   }
 }

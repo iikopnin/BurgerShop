@@ -1,0 +1,18 @@
+.caloricity {
+  width: 60px;
+  padding-top: 25px;
+  background-image: url("/img/svg/kkal.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  text-align: center;
+  font-family: "Gagalin";
+  font-size: rem(20px);
+  color: white;
+  opacity: 0.5;
+
+  &-kkal {
+    display: inline-block;
+    font-size: rem(14px);
+    margin-top: 10px;
+  }
+}

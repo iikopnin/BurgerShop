@@ -12,4 +12,12 @@
   @include phones {
     max-width: 460px;
   }
+
+  @include small-phones {
+    max-width: 360px;
+  }
+
+  @include small-height {
+    min-height: 560px;
+  }
 }
