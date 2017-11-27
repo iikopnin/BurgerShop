@@ -29,10 +29,14 @@
     }
     
     
-    &:hover, &:active, &:focus {
+    &:hover, &:focus {
       border-color: $white;
     }
   }
+}
+
+.active .dots-nav__link {
+  border-color: $white;
 }
 
 nav a {

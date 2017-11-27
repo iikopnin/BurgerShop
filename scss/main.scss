@@ -14,13 +14,14 @@
 @import "sections/reviews-section";
 @import "sections/order-section";
 @import "sections/contacts-section";
+@import "components/page-scroll";
 @import "components/header";
 @import "components/logo";
 @import "components/main-navigation";
 @import "components/button";
-@import "components/navigation-popup";
 @import "components/arrow-button";
 @import "components/features";
+@import "components/slideshow";
 @import "components/burger";
 @import "components/composition";
 @import "components/caloricity";
@@ -31,4 +32,7 @@
 @import "components/footer";
 @import "components/contacts";
 @import "components/socials";
+@import "components/navigation-popup";
+@import "components/review-popup";
+@import "components/form-popup";
 @import "components/dots-nav";

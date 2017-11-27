@@ -2,7 +2,8 @@
   background-image: linear-gradient(rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
 
   &__container {
-    @include flex(row, center, center);
-    padding: 5% 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }

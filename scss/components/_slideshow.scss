@@ -1,0 +1,49 @@
+.slideshow {
+
+  &__container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &__controles {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+
+    @include phones {
+      padding: 0 10px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+  }
+
+  &__item {
+    @include flex(row, center, center);
+    flex: 0 0 100vw;
+  }
+
+  &__button {
+    animation: none;
+    &--next {
+      transform: rotate(-90deg);
+    }
+
+    &--prev {
+      transform: rotate(90deg);
+    }
+  }
+}

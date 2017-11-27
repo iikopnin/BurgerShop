@@ -20,7 +20,7 @@
     &:hover, &:focus, &:active{
       
       .reviews__content {
-        visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -42,7 +42,8 @@
     padding: 5% 7.6363636364%;
     background-color: rgba(68, 69, 70, 0.55);
     color: $white;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
 
     @include tablets {
       align-items: center;

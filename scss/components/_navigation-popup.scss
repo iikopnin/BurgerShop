@@ -1,23 +1,28 @@
 .navigation-popup {
+  position: fixed;
+  top: 0;
   display: none;
+  overflow: hidden;
 
-  &--on {
-    position: absolute;
-    top: 0;
-    width: 100%;
+  &--active {
+    @include flex(column, center, center);    
+    width: 100vw;
     height: 100vh;
-    @include flex(column, center, center);
     background-color: rgba(47, 50, 52, 0.95);
+  }
+
+  &__list {
+    @include flex(column, center, center);    
   }
 
   &__item {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
 
     &:after {
       content: "";
       position: absolute;
-      top: 55px;
+      top: rem(55px);
       left: 50%;
       display: inline-block;
       height: 6px;
@@ -34,6 +39,14 @@
         display: none;
       }
     }
+
+    @include small-phones {
+      margin-bottom: rem(30px);
+
+      &:after {
+        top: rem(47px);
+      }
+    }
   }
 
   &__link {
@@ -41,27 +54,74 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $white;
+
+    @include small-phones {
+      // font-size: rem(17px);
+    }
   }
 
   &__button {
+    position: relative;
     display: none;
-    height: 25px;
     width: 30px;
-    background-image: url("../img/svg/menu-icon.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 5px;
+    border: none;
+    border-radius: 2px;
+    background-color: $white;
+    transition: transform 0.5s;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 5px;
+      border: none;
+      border-radius: 2px;
+      background-color: $white;
+      transition: transform 0.5s, top 0.3s;
+    }
+
+    &:before {
+      top: -10px;
+      left: 0;
+    }
+
+    &:after {
+      top: 10px;
+      left: 0;
+    }
 
     &--cross {
-      background-image: url("../img/svg/exit-cross.svg");
+      transform: rotate(45deg);
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+
+    &--inner {
+      position: absolute;
+      top: 43px;
+      right: 2.2%;
+
     }
 
     @include tablets {
       display: inline-block;
     }
   }
+
+  &__logo{
+    position: absolute;
+    top: 10px;
+    left: 2.2%;
+  }
 }
 
-.no-scroll {
-  overflow-y: hidden;
-}
 

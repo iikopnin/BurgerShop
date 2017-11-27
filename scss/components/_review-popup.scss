@@ -1,0 +1,66 @@
+.review-popup {
+  position: fixed;
+  top: 0;
+  display: none;
+  overflow: hidden; 
+
+  &--active {
+    @include flex(column, center, center);    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(47, 50, 52, 0.95);
+  }
+
+  &__container {
+    position: relative;
+    padding: 25px 15px;
+    width: 472px;
+    border-radius: 4px;
+    background-color: $white;
+    transform: translate(-50% -50%);
+
+    @include phones {
+      width: 95%;
+    }
+  }
+  
+  
+  &__name {
+    font-family: "Gagalin";
+    font-size: rem(14px);
+    margin-bottom: rem(20px);
+  }
+
+  &__text {
+    font-family: $fonts;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    line-height: rem(24px);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 20px;
+    height: 5px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ec8468;
+    transform: rotate(45deg);
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 20px;
+      height: 5px;
+      border: none;
+      border-radius: 2px;
+      background-color: #ec8468;
+      transform: rotate(90deg);
+    }
+  }
+}

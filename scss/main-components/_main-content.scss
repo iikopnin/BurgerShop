@@ -1,3 +1,5 @@
 .main-content {
   position: relative;
+  @include flex(column, flex-start, stretch);
 }
+

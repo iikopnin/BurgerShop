@@ -81,6 +81,7 @@
 
   &__input {
     margin-top: 4px;
+    padding: 0 4px;
     height: 2rem;
     width: 100%;
     border: 2px solid #d1cfcb;
@@ -88,6 +89,7 @@
   }
 
   &__textarea {
+    padding: 4px;
     height: rem(106px);
     resize: none;
   }

@@ -1,10 +1,9 @@
 .footer {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   z-index: 1;
-  width: 100%;
   background-color: #0e0e0e;
   background-image: url("../img/backgrounds/dark-bg.jpg");
 

@@ -1,22 +1,5 @@
 .composition {
   position: absolute;
-  text-align: left;
-  
-  &:hover, &:active, &:focus {
-    .composition__table {
-      position: static;
-      display: inline-block;
-      margin-left: -4px;
-    }
-  }
-
-  @include small-phones {
-    &:hover, &:active, &:focus {
-      .composition__table {
-        margin-left: 0;
-      }
-    }
-  }
 
   &__button {
     vertical-align: top;
@@ -31,15 +14,57 @@
     background-position: center 13px;
   }
 
-  &__table {
-    display: inline-block;
+  &__container {
     position: absolute;
     left: -9999px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    @include tablets {
+      padding-right: 60px;
+    }
+
+    @include phones {
+      // padding-right: 40px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 2;
+    display: none;
+    width: 25px;
+    height: 5px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ec8468;
+    transform: rotate(45deg);
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 25px;
+      height: 5px;
+      border: none;
+      border-radius: 2px;
+      background-color: #ec8468;
+      transform: rotate(90deg);
+    }
+
+    @include tablets {
+      display: block;
+    }
+  }
+
+  &__table {
     padding: 15px 20px;
     vertical-align: top;
     font-size: rem(14px);
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
 
     &-row {
       &:before {
@@ -85,9 +110,26 @@
       }
 
       &--weight {
+        padding-left: 60px;
         text-align: right;
         font-weight: 300;
+
+        @include phones {
+          padding-left: 20px;
+        }
       }
+    }
+  }
+}
+
+.composition--active {
+  .composition__container {
+    top: 0;
+    left: 84px;
+
+    @include small-phones {
+      left: 0;
+      top: 90px;
     }
   }
 }
